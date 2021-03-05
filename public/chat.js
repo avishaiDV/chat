@@ -1,4 +1,4 @@
-const socket = io.connect("https://avishaichat.herokuapp.com:80");
+const socket = io.connect("https://avishaichat.herokuapp.com:8080");
 
 // dom
 
