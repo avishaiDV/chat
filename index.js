@@ -17,8 +17,9 @@ const io = socket(server);
 let user = 1;
 
 io.on("connection", function (socket) {
-  socket.id = `user ${user}`;
-  user++;
+  socket.on('nickname', (data) => {
+    socket.id = data.nick;
+  });
   console.log("made a socket connection", socket.id);
 
   socket.on("chat", function (data) {
