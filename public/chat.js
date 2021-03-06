@@ -1,17 +1,17 @@
-const socket = io.connect("https://avishaichat.herokuapp.com");
+const socket = io.connect("http://localhost:4000");
 
 // dom
-
 const message = document.getElementById("message");
 const btn = document.getElementById("send");
 const output = document.getElementById("output");
 
-let nickname = prompt("What is your name?");
-
+const nick = document.URL.split("nick=")[1];
+if (!nick) {
+  window.history.back();
+}
 socket.emit("nickname", {
-  nick: nickname,
+  nick: nick,
 });
-
 
 btn.addEventListener("click", function () {
   if (!message.value) {

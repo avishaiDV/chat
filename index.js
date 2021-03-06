@@ -1,9 +1,8 @@
 const express = require("express");
 const app = express();
 const socket = require("socket.io");
-const PORT = process.env.PORT || 8080;
-const server = app.listen(PORT, function () {
-  console.log("listening to requests on port ", PORT);
+const server = app.listen(4000, function () {
+  console.log("listening to requests on port 4000.");
 });
 
 // static files
@@ -17,7 +16,7 @@ const io = socket(server);
 let user = 1;
 
 io.on("connection", function (socket) {
-  socket.on('nickname', (data) => {
+  socket.on("nickname", (data) => {
     socket.id = data.nick;
   });
   console.log("made a socket connection", socket.id);

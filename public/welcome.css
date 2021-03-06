@@ -1,0 +1,31 @@
+body {
+  font-family: "open sans hebrew";
+}
+
+.form {
+  max-width: 600px;
+  margin: 30px auto;
+  border: 1px solid #ddd;
+  border-radius: 15px;
+  box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.05);
+}
+
+input {
+  border-radius: 15px;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  background: #eee;
+  display: block;
+  width: 100%;
+  background: #fff;
+  border-bottom: 1px solid #eee;
+  font-family: "open sans hebrew";
+  font-size: 16px;
+  border: none;
+  outline: none;
+}
+
+.btn {
+  color: gray;
+  background: #dddddd;
+}

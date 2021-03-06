@@ -4,22 +4,32 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>WebSocket</title>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/3.1.2/socket.io.js"
-      integrity="sha512-YybopSVjZU0fe8TY4YDuQbP5bhwpGBE/T6eBUEZ0usM72IWBfWrgVI13qfX4V2A/W7Hdqnm7PIOYOwP9YHnICw=="
-      crossorigin="anonymous"
-    ></script>
-    <link rel="stylesheet" href="styles.css" />
+    <title>Welcome!</title>
+    <link rel="stylesheet" href="welcome.css" />
   </head>
   <body>
-    <div id="chat">
-      <div id="chat-window">
-        <div id="output"></div>
-      </div>
-      <input type="text" id="message" placeholder="Type a message..." />
-      <button id="send">Send</button>
+    <div class="form">
+      <form action="/chat.html" id="form">
+        <input
+          id="username"
+          type="text"
+          name="nick"
+          placeholder="what is your name?"
+          required
+        />
+        <input
+          class="btn"
+          type="button"
+          onclick="myFunction()"
+          value="Enter the chat!"
+        />
+      </form>
     </div>
-    <script src="chat.js"></script>
+
+    <script>
+      function myFunction() {
+        document.getElementById("form").submit();
+      }
+    </script>
   </body>
 </html>
