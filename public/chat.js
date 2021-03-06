@@ -1,5 +1,4 @@
-const PORT = process.env.PORT || 8080;
-const socket = io.connect("https://avishaichat.herokuapp.com:" + PORT);
+const socket = io.connect("https://avishaichat.herokuapp.com");
 
 // dom
 
