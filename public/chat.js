@@ -6,6 +6,13 @@ const message = document.getElementById("message");
 const btn = document.getElementById("send");
 const output = document.getElementById("output");
 
+let nickname = prompt("What is your name?");
+
+socket.emit("nickname", {
+  nick: nickname,
+});
+
+
 btn.addEventListener("click", function () {
   if (!message.value) {
     alert("please type a message!");
