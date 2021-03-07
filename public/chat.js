@@ -5,7 +5,7 @@ const message = document.getElementById("message");
 const btn = document.getElementById("send");
 const output = document.getElementById("output");
 
-const nick = document.URL.split("nick=")[1];
+const nick = decodeURI(location.search).split("nick=")[1];
 if (!nick) {
   window.history.back();
 }
